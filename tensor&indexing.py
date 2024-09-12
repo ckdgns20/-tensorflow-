@@ -2,16 +2,16 @@ import tensorflow as tf
 import numpy as np
 
 
-rank_0_tensor = tf.constant(4)
+rank_0_tensor = tf.constant(4) #rank_0_tensor 는 0차원의 텐서 형성(스칼라)
 print(rank_0_tensor)
 
 
-rank_1_tensor = tf.constant([2.0, 3.0, 4.0])
+rank_1_tensor = tf.constant([2.0, 3.0, 4.0]) #rank_1_tensor 는 1차원의 텐서 형성(벡터)
 print(rank_1_tensor)
 
 rank_2_tensor = tf.constant([[1, 2],
                              [3, 4],
-                             [5, 6]], dtype=tf.float16)
+                             [5, 6]], dtype=tf.float16) #rank_2_tensor 는 2차원의 텐서 형성(행렬)
 print(rank_2_tensor)
 
 
@@ -21,11 +21,11 @@ rank_3_tensor = tf.constant([
   [[10, 11, 12, 13, 14],
    [15, 16, 17, 18, 19]],
   [[20, 21, 22, 23, 24],
-   [25, 26, 27, 28, 29]],])
+   [25, 26, 27, 28, 29]],]) #rank_3_tensor 는 3차원의 텐서 형성
 
 print(rank_3_tensor)
 
-rank_4_tensor = tf.zeros([3, 2, 4, 5])
+rank_4_tensor = tf.zeros([3, 2, 4, 5]) #tf.zeros는 텐서요소를 0으로 채워서 생성
 
 print("Type of every element:", rank_4_tensor.dtype)
 print("Number of axes:", rank_4_tensor.ndim)
