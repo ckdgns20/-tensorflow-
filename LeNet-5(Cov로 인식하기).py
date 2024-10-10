@@ -16,9 +16,9 @@ y_train=tf.keras.utils.to_categorical(y_train,10) #one hot encoding
 y_test=tf.keras.utils.to_categorical(y_test,10)
 
 cnn=Sequential() 
-cnn.add(Conv2D(6,(5,5),padding='same',activation='relu',input_shape=(28,28,1))) 
+cnn.add(Conv2D(6,(5,5),padding='same',activation='relu',input_shape=(28,28,1))) # 6차원으로 출력
 cnn.add(MaxPooling2D(pool_size=(2,2),strides=2))
-cnn.add(Conv2D(16,(5,5),padding='valid',activation='relu')) 
+cnn.add(Conv2D(16,(5,5),padding='valid',activation='relu')) # 16차원으로 출력
 cnn.add(MaxPooling2D(pool_size=(2,2),strides=2))
 cnn.add(Conv2D(120,(5,5),padding='valid',activation='relu')) 
 cnn.add(Flatten())
