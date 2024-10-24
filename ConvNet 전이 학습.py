@@ -141,7 +141,7 @@ plt.title('Training and Validation Loss')
 plt.xlabel('epoch')
 plt.show()
 
-base_model.trainable = True
+base_model.trainable = True # Finetuning 
 
 # Let's take a look to see how many layers are in the base model
 print("Number of layers in the base model: ", len(base_model.layers))
